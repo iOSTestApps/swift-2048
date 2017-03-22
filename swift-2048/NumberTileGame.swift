@@ -192,6 +192,7 @@ class NumberTileGameViewController : UIViewController, GameModelProtocol {
   // Commands
   @objc(up:)
   func upCommand(_ r: UIGestureRecognizer!) {
+    BuddyBuildSDK.crash()
     assert(model != nil)
     let m = model!
     m.queueMove(MoveDirection.up,

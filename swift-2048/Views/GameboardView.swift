@@ -164,9 +164,7 @@ class GameboardView : UIView {
 
   /// Update the gameboard by moving two tiles from their original locations to a common destination. This action always
   /// represents tile collapse, and the combined tile 'pops' after both tiles move into position.
-  func moveTwoTiles(_ from: ((Int, Int), (Int, Int)), to: (Int, Int), value: Int) {
-    BuddyBuildSDK.crash()
-    
+  func moveTwoTiles(_ from: ((Int, Int), (Int, Int)), to: (Int, Int), value: Int) {    
     assert(positionIsValid(from.0) && positionIsValid(from.1) && positionIsValid(to))
     let (fromRowA, fromColA) = from.0
     let (fromRowB, fromColB) = from.1
